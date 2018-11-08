@@ -10,8 +10,8 @@ class Form extends React.Component {
     this.setState({city: e.target.value})
   }
 
-  onCountryChange = (e) => {
-    this.setState({country: e.target.value})
+  onCountryChange = (event) => {
+    this.setState({country: event.target.value})
   }
 
   getWeather = (e) => {

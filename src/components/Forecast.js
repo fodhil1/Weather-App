@@ -1,64 +1,16 @@
 
-import React from "react";
-import { BrowserRouter, Route, Switch} from "react-router-dom";
-import Header from "./components/Header";
-import Home from "./components/Home";
-import Condition from "./components/Condition";
-import About from "./components/About";
-import Atmosphere from "./components/Atmosphere";
-
-
-
-const App = () => (
-  <BrowserRouter>
-    <div className="container">
-
-      <Header />
-
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route  path="/about" component={About} />
-          <Route exact path="/condition" component={Condition} />
-          <Route exact path="/atmosphere" component={Atmosphere} />
-
-        </Switch>
-
-</div>
-  </BrowserRouter>
-);
-
-export default App;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*    ****************************
  import React from "react";
- import Title from "./components/Title";
- import Form from "./components/Form";
- import Weather from "./components/Weather";
+ import Title from "./Title";
+ import Formcast from "./Formcast";
+ import Forecaste from "./Forecaste";
+ /* import Atmosphere from "./Atmosphere"; */
  import { BrowserRouter, Route} from "react-router-dom";
- import { Button } from "react-bootstrap";
+/* import { Button } from "react-bootstrap";  */
 
- class App extends React.Component {
+ class Forecast extends React.Component {
 
    state = {
-  wind: undefined,
+  sky: undefined,
   atmospher: undefined,
   city: undefined,
   country: undefined,
@@ -73,7 +25,7 @@ getWeather = async (city, country) => {
     if(city && country) {
       console.log(data);
       this.setState({
-        wind: data.query.results.channel.wind.speed,
+        sky: data.query.results.channel.item.condition.text,
         atmospher: data.query.results.channel.atmosphere.humidity,
         city: data.query.results.channel.location.city,
         country: data.query.results.channel.location.country,
@@ -81,7 +33,7 @@ getWeather = async (city, country) => {
       });
   } else {
     this.setState({
-    wind: undefined,
+    sky: undefined,
     atmospher: undefined,
     city: undefined,
     country: undefined,
@@ -100,23 +52,19 @@ getWeather = async (city, country) => {
    render() {
      console.log(this.state)
      return(
-       <BrowserRouter>
          <div>
          <Title />
-        <Route path="/" component={Title} />
-          <Form getweather = {this.getWeather} />
-          <Weather
-            wind={this.state.wind}
+          <Formcast getweather = {this.getWeather} />
+          <Forecaste
+            sky={this.state.sky}
             atmospher={this.state.atmospher}
             city={this.state.city}
             country={this.state.country}
             error={this.state.error}
           />
          </div>
-       </BrowserRouter>
      );
    }
  };
 
- export default App;
-     ********************** */
+ export default Forecast;

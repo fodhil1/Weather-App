@@ -1,6 +1,6 @@
 import React from "react";
 
-class Form extends React.Component {
+class Formatmo extends React.Component {
   state = {
     city: '',
     country: ''
@@ -23,10 +23,10 @@ class Form extends React.Component {
       <form onSubmit={this.getWeather} >
         <input type="text" name="city" placeholder="City..." onChange={this.onCityChange} />
         <input type="text" name="country" placeholder="Country..." onChange={this.onCountryChange}/>
-        <button>Get Weather</button>
+        <button>Get Atmosphere</button>
       </form>
     );
   }
 };
 
-export default Form;
+export default Formatmo;

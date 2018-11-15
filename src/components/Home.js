@@ -1,61 +1,13 @@
 
-import React from "react";
-import { BrowserRouter, Route, Switch} from "react-router-dom";
-import Header from "./components/Header";
-import Home from "./components/Home";
-import Condition from "./components/Condition";
-import About from "./components/About";
-import Atmosphere from "./components/Atmosphere";
-
-
-
-const App = () => (
-  <BrowserRouter>
-    <div className="container">
-
-      <Header />
-
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route  path="/about" component={About} />
-          <Route exact path="/condition" component={Condition} />
-          <Route exact path="/atmosphere" component={Atmosphere} />
-
-        </Switch>
-
-</div>
-  </BrowserRouter>
-);
-
-export default App;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*    ****************************
  import React from "react";
- import Title from "./components/Title";
- import Form from "./components/Form";
- import Weather from "./components/Weather";
+ import Title from "./Title";
+ import Form from "./Form";
+ import Weather from "./Weather";
+ /* import Atmosphere from "./Atmosphere"; */
  import { BrowserRouter, Route} from "react-router-dom";
- import { Button } from "react-bootstrap";
+/* import { Button } from "react-bootstrap";  */
 
- class App extends React.Component {
+ class Home extends React.Component {
 
    state = {
   wind: undefined,
@@ -100,10 +52,8 @@ getWeather = async (city, country) => {
    render() {
      console.log(this.state)
      return(
-       <BrowserRouter>
-         <div>
+         <div className="content home">
          <Title />
-        <Route path="/" component={Title} />
           <Form getweather = {this.getWeather} />
           <Weather
             wind={this.state.wind}
@@ -113,10 +63,8 @@ getWeather = async (city, country) => {
             error={this.state.error}
           />
          </div>
-       </BrowserRouter>
      );
    }
  };
 
- export default App;
-     ********************** */
+ export default Home;

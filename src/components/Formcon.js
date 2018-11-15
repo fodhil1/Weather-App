@@ -1,6 +1,6 @@
 import React from "react";
 
-class Form extends React.Component {
+class Formcon extends React.Component {
   state = {
     city: '',
     country: ''
@@ -29,4 +29,4 @@ class Form extends React.Component {
   }
 };
 
-export default Form;
+export default Formcon;

@@ -2,9 +2,7 @@
  import React from "react";
  import Formcon from "./Formcon";
  import Conditione from "./Conditione";
- /* import Atmosphere from "./Atmosphere"; */
- import { BrowserRouter, Route} from "react-router-dom";
-/* import { Button } from "react-bootstrap";  */
+
 
  class Condition extends React.Component {
 

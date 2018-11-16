@@ -3,15 +3,14 @@
  import Title from "./Title";
  import Form from "./Form";
  import Weather from "./Weather";
- /* import Atmosphere from "./Atmosphere"; */
- import { BrowserRouter, Route} from "react-router-dom";
-/* import { Button } from "react-bootstrap";  */
+
 
  class Home extends React.Component {
 
    state = {
   wind: undefined,
   atmospher: undefined,
+  condition: undefined,
   city: undefined,
   country: undefined,
   error: undefined
@@ -27,6 +26,7 @@ getWeather = async (city, country) => {
       this.setState({
         wind: data.query.results.channel.wind.speed,
         atmospher: data.query.results.channel.atmosphere.humidity,
+        condition: data.query.results.channel.item.condition.temp,
         city: data.query.results.channel.location.city,
         country: data.query.results.channel.location.country,
         error: ""
@@ -35,6 +35,7 @@ getWeather = async (city, country) => {
     this.setState({
     wind: undefined,
     atmospher: undefined,
+    condition: undefined,
     city: undefined,
     country: undefined,
     error: "please enter the values"
@@ -58,6 +59,7 @@ getWeather = async (city, country) => {
           <Weather
             wind={this.state.wind}
             atmospher={this.state.atmospher}
+            condition={this.state.condition}
             city={this.state.city}
             country={this.state.country}
             error={this.state.error}

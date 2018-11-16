@@ -1,11 +1,8 @@
 
  import React from "react";
- import Title from "./Title";
  import Formatmo from "./Formatmo";
  import Atmospher from "./Atmospher";
- /* import Atmosphere from "./Atmosphere"; */
- import { BrowserRouter, Route} from "react-router-dom";
-/* import { Button } from "react-bootstrap";  */
+
 
  class Atmosphere extends React.Component {
 
@@ -65,5 +62,7 @@ getWeather = async (city, country) => {
      );
    }
  };
+
+ /* */
 
  export default Atmosphere;

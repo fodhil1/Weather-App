@@ -48,7 +48,6 @@
    .main-nav a {
      border-left: 3px solid transparent;
      border-right: 3px solid transparent;
-     padding: 1.25em 1.5em;
    }
    .main-nav a:hover {
      border-color: rgba(0,0,0, .1);
@@ -236,7 +235,24 @@ header,
     display: flex;
     flex-wrap: wrap;
   }
-  .main-nav a {
+
+  @media(max-width: 768px) {
+
+  header,
+
+  .main-nav li {
+
+    flaot: right;
+    display: inline;
+
+    text-align: center;
+
+    width: 100%;
+
+  }
+}
+
+  .main-nav a  {
     border-left: 3px solid transparent;
     border-right: 3px solid transparent;
     padding: 1.25em 1.5em;
@@ -245,10 +261,9 @@ header,
     border-color: rgba(0,0,0, .1);
   }
   /* COURSE NAV -------- */
-  .course-nav {
+  .main-nav li {
     float: right;
+    display: inline;
   }
-  .courses h2 {
-    float: left;
-  }
+
 }

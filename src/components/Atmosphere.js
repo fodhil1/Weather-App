@@ -49,7 +49,7 @@ getWeather = async (city, country) => {
    render() {
      console.log(this.state)
      return(
-         <div className="content">
+         <div className="content home">
            <div>
              <h1>Atmosphere of your location</h1>
              <p>Enter your location to get the astronomy</p>

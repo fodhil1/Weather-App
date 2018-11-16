@@ -1,9 +1,11 @@
+/* here we will create a nav bar */
+
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 const Header = () => (
   <header>
-    <div className="containerh">
+    <div className="containerh">  
         <ul className="main-nav">
           <li><NavLink exact to="/">Home</NavLink></li>
           <li><NavLink to="/about">About</NavLink></li>

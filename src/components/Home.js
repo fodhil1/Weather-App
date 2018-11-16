@@ -6,7 +6,7 @@
 
 
  class Home extends React.Component {
-
+ /* create a state */
    state = {
   wind: undefined,
   atmospher: undefined,
@@ -23,6 +23,7 @@ getWeather = async (city, country) => {
 
     if(city && country) {
       console.log(data);
+      /* save the data */
       this.setState({
         wind: data.query.results.channel.wind.speed,
         atmospher: data.query.results.channel.atmosphere.humidity,

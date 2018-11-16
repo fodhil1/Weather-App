@@ -6,7 +6,7 @@ class Title extends React.Component {
     return(
       <div>
         <h1>Weather Finder</h1>
-        <p>Find the temperature, Humidity, and Pressure</p>
+        <p>Find the the speed of the wind, Humidity, and the temperature</p>
       </div>
     );
   }

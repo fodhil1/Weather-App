@@ -1,3 +1,5 @@
+/* Here are some definitions of the weather elements */
+
 import React from 'react';
 
 const About = (props) => (

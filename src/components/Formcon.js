@@ -23,7 +23,7 @@ class Formcon extends React.Component {
       <form onSubmit={this.getWeather} >
         <input type="text" name="city" placeholder="City..." onChange={this.onCityChange} />
         <input type="text" name="country" placeholder="Country..." onChange={this.onCountryChange}/>
-        <button>Get Weather</button>
+        <button>Get Weather conditions</button>
       </form>
     );
   }
